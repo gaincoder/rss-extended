@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "RSS Feed Extended",
+		"description": "این افزونه فیدهای RSS متعددی از محتوا تولید می کند. اختیاری با خواندن بیشتر پیوند و فیدهای دسته"
+	},
+	"amount-of-items-to-show-on-the-feed": "تعداد مطالب جهت نمایش در خوراک.",
+	"short": "متن کوتاه",
+	"fulltext": "متن کامل"
+}

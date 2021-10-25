@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "RSS Feed Extended",
+		"description": "Este complemento genera múltiples fuentes RSS del contenido. Opcional con leer más enlaces y feeds de categorías"
+	},
+	"amount-of-items-to-show-on-the-feed": "Cantidad de artículos para mostrar.",
+	"short": "texto corto",
+	"fulltext": "texto completo"
+}

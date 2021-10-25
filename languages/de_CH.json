@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "RSS Feed Extended",
+		"description": "Das Plugin erstellt mehrere RSS Feeds der Inhalte. Eine Version mit Weiterlesen-Link und eine mit dem kompletten Text. Auch jeweils pro Kategorie."
+	},
+	"amount-of-items-to-show-on-the-feed": "Anzahl der gezeigten Inhalte.",
+	"short": "kurzer Text",
+	"fulltext": "kompletter Text"
+}

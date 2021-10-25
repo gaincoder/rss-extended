@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "RSS Feed Extended",
+		"description": "Dette plugin genererer flere RSS -feeds af indholdet. Valgfrit med læs-mere-link og kategorifeeds"
+	},
+	"amount-of-items-to-show-on-the-feed": "Antal at emner, der skal vises i feedet.",
+	"short": "kort tekst",
+	"fulltext": "komplet tekst"
+}

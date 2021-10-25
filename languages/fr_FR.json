@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "RSS Feed Extended",
+		"description": "Ce plugin génère plusieurs flux RSS du contenu. Facultatif avec les liens en savoir plus et les flux de catégories"
+	},
+	"amount-of-items-to-show-on-the-feed": "Nombre d'éléments à afficher sur le flux.",
+	"short": "texte court",
+	"fulltext": "texte complet"
+}

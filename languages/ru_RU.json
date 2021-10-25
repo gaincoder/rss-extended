@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "RSS Feed Extended",
+		"description": "This plugin generates multiple RSS feeds of the content. Optional with read-more-link and category feeds"
+	},
+	"amount-of-items-to-show-on-the-feed": "Количество позиций в RSS-канале.",
+	"short": "short text",
+	"fulltext": "full text"
+}
