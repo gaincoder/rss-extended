@@ -81,7 +81,7 @@ class RssExtended_XMLBuilder extends Plugin
             $short = false;
         }
         if($short) {
-            $itemXml .= '<description>' . Sanitize::html($page->contentBreak().'<br><br><a href="'.$this->encodeURL($page->permalink()).'">'.$this->translator->get('read-more').'</a>') . '</description>';
+            $itemXml .= '<description>' . Sanitize::html($page->contentBreak().' <a href="'.$this->encodeURL($page->permalink()).'">'.$this->translator->get('read-more').'</a>') . '</description>';
         }else{
             $itemXml .= '<description>' . Sanitize::html($page->content()) . '</description>';
         }
