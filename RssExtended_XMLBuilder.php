@@ -133,6 +133,10 @@ class RssExtended_XMLBuilder extends Plugin
 
     private function createXMLforCategories()
     {
+        global $categories;
+        $categories->reindex();
+        $this->categories = $categories;
+
         /** @var Category $category */
         foreach ($this->categoryList as $category) {
             $xml = $shortXml = $this->getXmlHead($this->site, $category);
