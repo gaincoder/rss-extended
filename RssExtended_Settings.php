@@ -13,10 +13,12 @@ class RssExtended_Settings extends Plugin
     /** @var string */
     private $defaultTextSize;
 
+    private $footer;
+
     /**
      * workaround because of bludit plugin structure
      */
-    public function constructBluditWorkaround($numberOfItems, $defaultTextSize)
+    public function constructBluditWorkaround($numberOfItems, $defaultTextSize,$footer)
     {
         global $L;
         $this->translator = $L;
@@ -24,6 +26,7 @@ class RssExtended_Settings extends Plugin
 
         $this->numberOfItems = $numberOfItems;
         $this->defaultTextSize = $defaultTextSize;
+        $this->footer = $footer;
     }
 
     public function renderSettingsPage()
@@ -56,6 +59,9 @@ class RssExtended_Settings extends Plugin
         }
         $html .= '<option ' . $fullTextSelected . ' value="' . pluginRSSextended::SETTING_FULLTEXT . '">' . $this->translator->get(pluginRSSextended::SETTING_FULLTEXT) . '</option>';
         $html .= '</select>';
+        $html .= '<label>Footer</label>';
+        $html .= '<textarea style="height:300px" name="footer">'.$this->getValue('footer').'</textarea>';
+
         $html .= '</div>';
         return $html;
     }

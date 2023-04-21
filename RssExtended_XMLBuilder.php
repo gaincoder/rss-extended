@@ -13,11 +13,12 @@ class RssExtended_XMLBuilder extends Plugin
     private $categories;
     private $numberOfItems;
     private $defaultTextSize;
+    private $footer;
 
     /**
      * workaround because of bludit plugin structure
      */
-    public function constructBluditWorkaround($numberOfItems,$defaultTextSize)
+    public function constructBluditWorkaround($numberOfItems,$defaultTextSize,$footer)
     {
         global $L;
         global $site;
@@ -30,6 +31,7 @@ class RssExtended_XMLBuilder extends Plugin
         $this->categoryList = getCategories();
         $this->numberOfItems = $numberOfItems;
         $this->defaultTextSize = $defaultTextSize;
+        $this->footer = $footer;
     }
 
     public function buildXml(){
@@ -83,7 +85,7 @@ class RssExtended_XMLBuilder extends Plugin
         if($short) {
             $itemXml .= '<description>' . Sanitize::html($page->contentBreak().' <a href="'.$this->encodeURL($page->permalink()).'">'.$this->translator->get('read-more').'</a>') . '</description>';
         }else{
-            $itemXml .= '<description>' . Sanitize::html($page->content()) . '</description>';
+            $itemXml .= '<description>' . Sanitize::html($page->content().$this->footer) . '</description>';
         }
         $itemXml .= '<pubDate>' . date(DATE_RSS, strtotime($page->getValue('dateRaw'))) . '</pubDate>';
         $itemXml .= '<guid isPermaLink="false">' . $page->uuid() . '</guid>';

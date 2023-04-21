@@ -39,12 +39,15 @@ class pluginRSSextended extends Plugin
     /** @var string */
     private $defaultTextSize;
 
+    private $footer;
+
     public function __construct()
     {
         parent::__construct();
 
         $this->numberOfItems = $this->getValue('numberOfItems');
         $this->defaultTextSize = $this->getValue('defaultTextSize');
+        $this->footer = $this->getValue('footer');
 
         $this->constructBluditWorkaround();
     }
@@ -60,17 +63,18 @@ class pluginRSSextended extends Plugin
         $this->xmlOutput->constructBluditWorkaround($this->workspace());
 
         $this->xmlBuilder = new RssExtended_XMLBuilder();
-        $this->xmlBuilder->constructBluditWorkaround($this->numberOfItems, $this->defaultTextSize);
+        $this->xmlBuilder->constructBluditWorkaround($this->numberOfItems, $this->defaultTextSize,$this->footer);
 
         $this->settings = new RssExtended_Settings();
-        $this->settings->constructBluditWorkaround($this->numberOfItems, $this->defaultTextSize);
+        $this->settings->constructBluditWorkaround($this->numberOfItems, $this->defaultTextSize,$this->footer);
     }
 
     public function init()
     {
         $this->dbFields = array(
             'numberOfItems' => self::DEFAULT_NO_ITEMS,
-            'defaultTextSize' => self::SETTING_FULLTEXT
+            'defaultTextSize' => self::SETTING_FULLTEXT,
+            'footer' => ''
         );
     }
 
