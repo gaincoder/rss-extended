@@ -76,7 +76,7 @@ class RssExtended_XMLBuilder extends Plugin
         $itemXml .= '<item>';
         $itemXml .= '<title>' . $page->title() . '</title>';
         $itemXml .= '<link>' . $this->encodeURL($page->permalink()) . '</link>';
-        $itemXml .= '<image>' . $page->coverImage(true) . '</image>';
+        // $itemXml .= '<image>' . $page->coverImage(true) . '</image>';
         if(count(explode(PAGE_BREAK,$page->content())) == 1){
             $short = false;
         }
